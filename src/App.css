@@ -12,15 +12,6 @@
   background-color: rgb(247, 247, 247);
 }
 
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex-direction: column;
-  width: 480px;
-}
-
 .content_center {
   width: 100%;
   display: flex;

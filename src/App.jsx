@@ -82,7 +82,7 @@ function App() {
   }
 
   return (
-    <div className="content">
+    <div className="flex justify-center items-center h-[100vh] flex-col w-[480px]">
       <div className="content_center">
         <div className="delete_section">
           <h2>Image gallery</h2>
