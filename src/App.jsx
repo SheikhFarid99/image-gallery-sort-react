@@ -69,30 +69,43 @@ function App() {
     })
     setSelectItems([])
   }
+
+  const featured = () => {
+    const temp_data = items.left.filter(item1 =>
+      !selectItems.some(item2 => item2.id === item1.id)
+    );
+    setItems({
+      ...items,
+      left: [...selectItems, ...temp_data]
+    })
+    setSelectItems([])
+  }
+
   return (
     <div className="content">
       <div className="content_center">
         <div className="delete_section">
-
+          <h2>Image gallery</h2>
           {
-            selectItems.length > 0 ? < div className="flex justify-between items-center">
+            selectItems.length > 0 && < div className="flex justify-between items-center">
               <div className="flex gap-10">
                 <input onChange={() => setSelectItems([])} checked={selectItems.length > 0} type="checkbox" />
                 <span>{selectItems.length} Items select</span>
               </div>
+              <span onClick={featured}>Featured</span>
               <span onClick={delete_items}>delete</span>
-            </div> : <h2>Image gallery</h2>
+            </div>
           }
         </div>
         <GridContextProvider onChange={onChange}>
           <div className="image_content">
             <GridDropZone style={{
-              height: `${Math.ceil(items.left.length / 4) * 160}px`
+              height: `${Math.ceil(items.left.length / 4) * 100}px`
             }}
               className="dropzone left"
               id="left"
               boxesPerRow={4}
-              rowHeight={160}
+              rowHeight={100}
             >
               {items.left.map(item => (
                 <GridItem key={item.id}>

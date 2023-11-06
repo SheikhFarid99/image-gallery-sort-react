@@ -18,7 +18,7 @@
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  width: 800px;
+  width: 480px;
 }
 
 .content_center {
@@ -41,6 +41,9 @@
   font-size: 20px;
   font-weight: 600;
   color: #404040;
+}
+.items-center{
+  margin-top: 10px;
 }
 
 .image_content {
@@ -123,7 +126,7 @@ img {
   gap: 10px;
 }
 .flex .gap-10 span{
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   color: #000000;
 }
